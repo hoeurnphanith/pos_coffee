@@ -1,0 +1,26 @@
+body{
+    font-family: 'Hanuman', serif !important;
+    /* margin: 15px !important; */
+    padding-top: 2% !important;
+    font-size: 20px;
+}
+table{
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 10px !important;
+}
+table tr th{
+    text-align: center !important;
+    border: 1px solid #ccc;
+    font-size: 17px;
+}
+table tr td{
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.title1{
+    padding-left:42% ;
+    margin-top: 8px !important;
+    font-size: 35px !important;
+    font-weight: bold;
+}

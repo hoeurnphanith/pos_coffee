@@ -1,0 +1,195 @@
+body{
+    font-family: 'Hanuman', serif !important;
+}
+.dashboard-h1{
+    font-family: 'Hanuman', serif !important;
+    font-size: 20px !important;
+}
+.menu-title{
+    font-family: 'Hanuman', serif !important;
+    font-size: 20px !important;
+}
+.title{
+    font-family: 'Hanuman', serif !important;
+    font-size: 16px !important;
+}
+.text-right{
+    font-family: 'Hanuman', serif !important;
+    font-size: 14px !important;
+}
+
+
+/*----------------- login page -------------------*/
+
+.index{
+    /* font-family: 'Hanuman', serif; */
+    font-family: 'Shantell Sans', cursive;
+    font-size: 25px;
+    color: #686de0;
+    font-weight: bold;
+}
+.bg_img{
+    display: flex !important;
+
+    /* background-image: url("../dist/img/bg_img.jpg") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; */
+}
+
+.login_bg{
+    border-radius: 5px !important;
+    background-color: #ffffffda !important;
+}
+
+.index-sign-up{
+    font-size: 15px;
+    font-family: 'Shantell Sans', cursive;
+}
+.frm-control{
+    border-radius: 4px !important;
+    padding:18px !important;
+}
+
+.frm-control:hover{
+    border-color: #0be881 !important;
+}
+
+.btn-login{
+    background-color:#54a0ff;
+    color:white;
+    width:100%;
+    font-size: 18px !important;
+}
+.btn-login:hover{
+    opacity: 0.8;
+    color: white !important;
+}
+/*-------------------End login page ---------------------*/
+
+ul.icon li a span{
+    font-size: 15px;
+}
+ul.icon li a i{
+    font-size: 17px;
+    margin-right: 10px;
+}
+.btn1{
+    color:white !important;
+    padding-right:12px;
+    background-color: #45aaf2;
+    padding:5px 8px;
+}
+.btn1-disable{
+    color:white !important;
+    padding-right:12px;
+    background-color: #7f8c8d;
+    padding:5px 8px;
+}
+
+.btn2{
+    color: white !important;
+    padding: 5px 8px;
+    background-color: #ff4757;
+}
+.btn2-disable{
+    color:white !important;
+    padding-right:12px;
+    background-color: #7f8c8d;
+    padding:5px 8px;
+}
+
+.btn-add{
+    float: right;
+    margin-left: 80%;
+    margin-right: 15px;
+}
+/* table tr:nth-child(even) td{
+    background-color: rgba(100, 148, 237, 0.07);
+} */
+
+i.icon{
+    padding-right: 5px;
+}
+.print{
+    color: white !important;
+    background-color: #ffd32a;
+}
+.img{
+    margin-top: 10px;
+    float: right;
+}
+.view-product{
+    padding-right:12px;
+    color:white !important;
+    background-color:#ffdd59;
+    padding:5px 8px;
+}
+.list-total{
+    font-size: 80px !important;
+}
+.list-pro{
+    font-size: 75px !important;
+}
+table tr th{
+    background-color:white;
+    box-shadow: 1px 1px 2px 0 #eee;
+}
+table tr.table-color td{
+    background-color:white;
+}
+
+
+/* -------------------------sale order card --------------*/
+.js-products{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 0px !important;
+    padding-left: 10px !important;
+    padding-right: 0px !important;
+    padding-bottom: 10px !important;
+    padding-top: 0px !important;
+    flex-wrap: wrap !important;
+}
+
+.card{
+    background-color:white !important;
+    box-shadow: 1px 1px 4px 0px #ccc !important;
+    box-sizing: border-box !important;
+    float:left !important;
+    padding: 10px !important;
+    margin-top: 10px !important;
+    cursor: pointer !important;
+}
+.card .card-body{
+    width: 100px !important;    
+    height: 80px !important;   
+    box-sizing: border-box !important;
+}
+.card .card-body img{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 4px !important;
+}
+.card .card-font{
+    font-family: 'Shantell Sans', cursive !important;
+    font-size: 12px;
+    margin-top: 0px !important;
+}
+.scroll::-webkit-scrollbar {
+    display: none !important;
+}
+
+table.multi-tr tr th{
+    background-color:aquamarine !important;
+    color: black;
+}
+
+.admin-name{
+    color: #54a0ff !important;
+    padding-left: 10px !important;
+    cursor: pointer !important;
+}
+.admin-name:hover{
+    opacity: 0.8;
+}

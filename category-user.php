@@ -1,0 +1,86 @@
+<?php
+    include_once('connectdb.php');
+    session_start();
+    if($_SESSION['username'] == "" OR $_SESSION['role']=="Admin"){
+        header('location:index.php');
+    }
+    include_once('action/headeruser.php');
+
+?>
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1 class="dashboard-h1">បញ្ចីក្រុមផលិតផល</h1>
+                <small></small>
+                <ol class="breadcrumb">
+                    <li><a href="#" class="text-right"><i class="fa-solid fa-gauge"></i> ទំព័រដើម</a></li>
+                    <li class="active text-right">ទំព័រដើម</li>
+                </ol>
+            </section>
+            <section class="content">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <h5 class="box-title title">អ្នកអាចស្វែងរកទិន្នន័យដោយប្រើតារាងខាងក្រោម</h5>
+                    </div>
+                    <div class="box-body">           
+                        <div class="col-md-12">
+                            <table class="table" id="tablecategory">
+                                <thead>
+                                    <tr>
+                                        <th width="50">ល.រ</th>
+                                        <th>ក្រុមផលិតផល</th>
+                                        <th width="200">បរិយាយ</th>
+                                        <th width="50">ស្ថានភាព</th>
+                                        <th width="60">ប្រត្តិបត្តិការ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        $select = $pdo->prepare("SELECT * FROM tbl_category ORDER BY cate_id ASC");
+                                        $select->execute();
+                                        $id = 0;
+                                        while($row = $select->fetch(PDO::FETCH_OBJ)){
+                                            $cate_id =$row->cate_id;
+                                            $cate_name = $row->cate_name;
+                                            $des = $row->des;
+                                            $status = $row->status;
+                                            $id = $id + 1;
+                                            ?>
+                                            
+                                                <tr>
+                                                    <td><?php echo $id;?></td>
+                                                    <td><?php echo $cate_name?></td>
+                                                    <td style="margin:0;padding:0;padding-top:7px;"><?php echo $des;?></td> 
+                                                    
+                                                    <?php 
+                                                        if($status =="Enable"){
+                                                            echo'<td><span class="label" style="background-color: #05c46b;color:white;">'.$status.'</span></td>';
+                                                        }else if($status=="Disable"){
+                                                            echo'<td><span class="label" style="background-color: #ff4757;color:white;">'.$status.'</span></td>';
+                                                        }
+                                                    ?>
+
+                                                    <td>
+                                                        <a href="#"><i class="fa-solid fa-pen-to-square btn1-disable"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-trash-can btn2-disable"></i></a>
+                                                    </td>
+                                                </tr>
+                                            <?php
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            $(document).ready( function () {
+                $('#tablecategory').DataTable({order: [[0, 'desc']],});
+            });
+
+        </script>
+<?php
+    include_once('action/footer.php');
+?>
